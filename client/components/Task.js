@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { putChangeStatus, deleteTask } from '../redux/reducers/reducer';
-
 const Task = (props) => {
   return (
-    <div className="container">
       <div className="row">
         <div className="btn-group" role="group" aria-label="Basic example">
           <button type="button" onClick={() => {
@@ -13,9 +11,7 @@ const Task = (props) => {
         </div>
         <h3 style={{textDecoration: props.isComplete ? "line-through" : "none"}}>{props.Name}</h3>
       </div>
-    </div>
   );
 };
-
 const mapDispatch = {putChangeStatus, deleteTask};
 export default connect(null, mapDispatch)(Task);

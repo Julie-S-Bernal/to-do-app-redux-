@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Routes from './components/Routes';
+import Home from './components/Home';
 import {Provider} from 'react-redux';
 import store from './redux/store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Routes />
+    <Home />
   </Provider>,
   document.getElementById('root')
-);
+);;
